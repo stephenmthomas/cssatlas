@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS Atlas</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <img src="icons/icon32.png" class="logo">
+        <h1>CSS Atlas</h1>
+      <button id="scanBtn" class="btn">Scan</button>
+    </header>
+
+    <section class="stats">
+      <div class="stat"><div class="stat__label">DOM Classes</div><div id="statDom" class="stat__value">0</div></div>
+      <div class="stat"><div class="stat__label">CSS Classes</div><div id="statCss" class="stat__value">0</div></div>
+      <div class="stat"><div class="stat__label">Pseudo Rules</div><div id="statPseudo" class="stat__value">0</div></div>
+      <div class="stat"><div class="stat__label">Properties</div><div id="statProps" class="stat__value">0</div></div>
+    </section>
+
+    <section class="panel">
+      <div class="tabs">
+        <button class="tabBtn is-active" data-tab="classes" type="button">Classes</button>
+        <button class="tabBtn" data-tab="pseudo" type="button">Pseudo</button>
+        <button class="tabBtn" data-tab="tokens" type="button">Properties</button>
+      </div>
+
+      <section class="tabPanel is-active" data-panel="classes">
+        <div class="panel__head">
+          <h2>Classes</h2>
+          <input id="classFilter" class="input" type="text" placeholder="Filter classes">
+        </div>
+        <div id="classList" class="list list--main"></div>
+      </section>
+
+      <section class="tabPanel" data-panel="pseudo" hidden>
+        <div class="panel__head">
+          <h2>Pseudo Selectors</h2>
+          <div class="meta">Pseudo-classes and pseudo-elements</div>
+        </div>
+        <div id="pseudoList" class="list list--main"></div>
+      </section>
+
+      <section class="tabPanel" data-panel="tokens" hidden>
+        <div class="panel__head">
+          <h2>Properties / Values</h2>
+          <input id="propFilter" class="input" type="text" placeholder="Filter properties">
+        </div>
+        <div id="propList" class="list list--main propList"></div>
+      </section>
+
+      <section class="tabPanel" data-panel="dataviz" hidden>
+        <div class="panel__head">
+          <h2>Analysis</h2>
+          <div class="meta">Visualize CSS data</div>
+        </div>
+        <div id="dataviz" class="list list--main"></div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <button id="copyJsonBtn" class="btn btn--secondary">Copy JSON</button>
+      <div id="status" class="status">Ready</div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
