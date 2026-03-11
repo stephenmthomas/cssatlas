@@ -32,12 +32,11 @@ It scans the active tab and extracts:
 4. Choose **Load unpacked**
 5. Select the `css-atlas` folder
 
-## Tech Stack
+## Languages
 
 - JavaScript
 - HTML
 - CSS
-- Manifest V3
 
 ## Roadmap
 
