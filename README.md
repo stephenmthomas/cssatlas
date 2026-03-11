@@ -38,13 +38,6 @@ It scans the active tab and extracts:
 - HTML
 - CSS
 
-## Roadmap
-
-- Overrides / live applicator tab
-- CSS variable inventory
-- selector frequency analysis
-- export reports
-
 ## License
 
 MIT
